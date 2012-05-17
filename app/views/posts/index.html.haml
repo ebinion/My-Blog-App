@@ -1,0 +1,7 @@
+%h1 All Posts
+
+%ul 
+	- @posts.each do |post|
+		%li
+			%h2= link_to post.title, post_path(post)
+  

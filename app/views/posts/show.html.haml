@@ -1,0 +1,13 @@
+%h1= @post.title
+%p
+	posted
+	= time_ago_in_words @post.created_at
+	ago 
+	by
+	= @post.user.name
+.body= @post.body
+
+%p
+	filed under
+	- @post.categories.each do |cat|
+		= cat.name
