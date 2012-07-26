@@ -3,11 +3,17 @@ BlogApp::Application.routes.draw do
 
   resources :users
 
-  resources :posts
+  resources :posts do
+  	member do 
+  		put "upload"
+  	end
+  end
   
   get "login" => "Sessions#login", :as => "login"
   
-  post "login" => "Session#create", :as => "login"
+  post "login" => "Sessions#create", :as => "login"
+  
+  delete "logout" => "Sessions#destroy", :as => "session"
   
   root to: "Posts#index"
 end

@@ -9,6 +9,7 @@ gem 'sqlite3'
 
 gem 'thin'
 gem 'quiet_assets'
+gem 'tinymce-rails'
 
 
 # Gems used only for assets and not required
